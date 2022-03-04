@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
 import com.vangood.test0304.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -28,7 +29,12 @@ class MainActivity : AppCompatActivity() {
         } else if (diff > 0){
             message = "Smaller"
         }
-        Toast.makeText(this,message,Toast.LENGTH_LONG).show()
+        //Toast.makeText(this,message,Toast.LENGTH_LONG).show()
+        AlertDialog.Builder(this)
+            .setTitle("Message")
+            .setMessage(message)
+            .setPositiveButton("OK",null)
+            .show()
 
     }
 }
