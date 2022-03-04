@@ -7,6 +7,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import com.vangood.test0304.databinding.ActivityMainBinding
+import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
@@ -19,7 +20,7 @@ class MainActivity : AppCompatActivity() {
     }
     val secretNumber = SecretNumber()
     fun go(view: View){
-        val n = binding.edNum.text.toString().toInt()
+        val n = ed_num.text.toString().toInt()
         println("number: $n")
         Log.d("MainActivity","number:" + n)
         val diff = secretNumber.validate(n)
