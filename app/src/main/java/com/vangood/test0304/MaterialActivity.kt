@@ -13,6 +13,7 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import com.vangood.test0304.databinding.ActivityMaterialBinding
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.activity_main.ed_num
+import kotlinx.android.synthetic.main.activity_material.*
 import kotlinx.android.synthetic.main.content_material.*
 
 class MaterialActivity : AppCompatActivity() {
@@ -33,9 +34,14 @@ class MaterialActivity : AppCompatActivity() {
         setupActionBarWithNavController(navController, appBarConfiguration)
 
         binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
+            AlertDialog.Builder(this)
+                .setTitle("Replay Game")
+                .setMessage("Are you sure?")
+                .setPositiveButton(getString(R.string.ok),null)
+                .setNegativeButton("Cancel",null)
+                .show()
         }
+        counter.setText(secretNumber.count.toString())
     }
 
     override fun onSupportNavigateUp(): Boolean {
@@ -55,6 +61,7 @@ class MaterialActivity : AppCompatActivity() {
         } else if (diff > 0){
             message = getString(R.string.small)
         }
+        counter.setText(secretNumber.count.toString())
         //Toast.makeText(this,message,Toast.LENGTH_LONG).show()
         AlertDialog.Builder(this)
             .setTitle(getString(R.string.mess))
