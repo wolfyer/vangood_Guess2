@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">猜數字</string>
+    <string name="select_number">選一個數字１－１０</string>
+    <string name="ok">確認</string>
+    <string name="win">你贏了，終極密碼是：</string>
+    <string name="big">大一點</string>
+    <string name="small">小一點</string>
+    <string name="mess">提示訊息</string>
+</resources>

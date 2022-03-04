@@ -23,17 +23,17 @@ class MainActivity : AppCompatActivity() {
         println("number: $n")
         Log.d("MainActivity","number:" + n)
         val diff = secretNumber.validate(n)
-        var message = "win! the secret number is $n"
+        var message = getString(R.string.win)+n
         if (diff < 0){
-            message = "Bigger"
+            message = getString(R.string.big)
         } else if (diff > 0){
-            message = "Smaller"
+            message = getString(R.string.small)
         }
         //Toast.makeText(this,message,Toast.LENGTH_LONG).show()
         AlertDialog.Builder(this)
-            .setTitle("Message")
+            .setTitle(getString(R.string.mess))
             .setMessage(message)
-            .setPositiveButton("OK",null)
+            .setPositiveButton(getString(R.string.ok),null)
             .show()
 
     }

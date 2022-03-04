@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Test0304</string>
+    <string name="select_number">Select Number (1-10)</string>
+    <string name="ok">OK</string>
+    <string name="win">\"win! the secret number is \"</string>
+    <string name="big">Bigger</string>
+    <string name="small">Smaller</string>
+    <string name="mess">Message</string>
 </resources>
