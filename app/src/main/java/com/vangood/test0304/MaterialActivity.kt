@@ -37,7 +37,10 @@ class MaterialActivity : AppCompatActivity() {
             AlertDialog.Builder(this)
                 .setTitle("Replay Game")
                 .setMessage("Are you sure?")
-                .setPositiveButton(getString(R.string.ok),null)
+                .setPositiveButton(getString(R.string.ok), { dialog, which ->
+                    secretNumber.reset()
+                    counter.setText(secretNumber.count.toString())
+                })
                 .setNegativeButton("Cancel",null)
                 .show()
         }
