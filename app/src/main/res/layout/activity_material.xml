@@ -77,6 +77,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="300dp"
         android:layout_marginTop="60dp"
-        android:text="TextView" />
+        android:text="0" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
